@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Educational Website</title>
     <style>
-        body {
+        /* body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -43,15 +43,14 @@
             color: white;
             text-align: center;
             padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .video-container {
@@ -71,24 +70,94 @@
 
         .search-container {
             margin-top: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        } */
 
-        .search-container label {
-            margin-right: 10px;
-        }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    color: #333;
+}
 
-        .filter-container {
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-between;
-        }
+header {
+    background-color: #4CAF50;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
 
-        .filter-container select {
-            padding: 5px;
-        }
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff; /* Improved contrast */
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.search-container {
+    margin-top: 20px;
+}
+
+/* Improved contrast for the search input and button */
+label, input, button {
+    color: #333;
+}
+
+/* Additional styling for better contrast */
+input {
+    padding: 8px;
+    border: 1px solid #333;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
     </style>
 </head>
 <body>
@@ -116,22 +185,6 @@
             <label for="search">Search:</label>
             <input type="text" id="search" name="search">
             <button onclick="search()">Search</button>
-        </div>
-
-        <div class="filter-container">
-            <label for="category">Category:</label>
-            <select id="category">
-                <option value="all">All</option>
-                <option value="science">Science</option>
-                <option value="technology">Technology</option>
-                <option value="history">History</option>
-            </select>
-
-            <label for="sort">Sort By:</label>
-            <select id="sort">
-                <option value="popularity">Popularity</option>
-                <option value="newest">Newest</option>
-            </select>
         </div>
 
         <!-- Add more content like buttons, images, text fields, etc. -->
